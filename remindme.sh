@@ -36,12 +36,6 @@ if rawText is "" then
     return
 end if
 
--- Normalize common misspellings (expand as needed)
-set normalizedText to rawText
-set normalizedText to my replaceText("Febuaray", "February", normalizedText)
-set normalizedText to my replaceText("Feburary", "February", normalizedText)
-set normalizedText to my replaceText("Febuary", "February", normalizedText)
-
 -- Parse date from normalized text
 set parsedDate to extractDateFromText(normalizedText)
 
